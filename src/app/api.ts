@@ -10,7 +10,7 @@ import chakra from '../images/chakra.png'
 import kingpudding from '../images/kingpudding.jpg'
 import mustWatch from '../images/mustWatch.jpg'
 import gamingStore from '../images/gamingStore.jpg'
-import quizabouteverything from '../images/quizAboutEverything.png'
+import quizAboutEverything from '../images/quizAboutEverything.png'
  
 export const myTechnologies = [
     {
@@ -64,7 +64,7 @@ export const myTechnologies = [
     },
     {
       name: "quiz about everything",
-      image: quizabouteverything,
+      image: quizAboutEverything,
       description: "A fun Trivia-Quiz game!",
       url: "https://quiz-about-everything.netlify.app/"
     }
