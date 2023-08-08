@@ -1,0 +1,164 @@
+/* Global, root and main container styles */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.root-layout {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  margin: 40px;
+  min-height: calc(100vh - 80px);
+  border: 1px solid rgb(255,255,255, .5);
+  color: white;
+}
+
+.light-layout {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  margin: 40px;
+  min-height: calc(100vh - 80px);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  color: black;
+}
+
+.home-layout {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  margin: 40px;
+  min-height: calc(100vh - 80px);
+}
+
+#main-title{
+  -webkit-animation: 0.5s ease 0s normal forwards 1 fadein;
+  animation: 0.5s ease 0s normal forwards 1 fadein;
+}
+
+@keyframes fadein{
+  0% { opacity:0; }
+  66% { opacity:0; }
+  100% { opacity:1; }
+}
+
+@-webkit-keyframes fadein{
+  0% { opacity:0; }
+  66% { opacity:0; }
+  100% { opacity:1; }
+}
+
+.main-content {
+  width: 70%;  
+  height: 100%;
+  /*border: 1px solid red;*/
+}
+
+.nav-anchor  {
+  padding: 0 0 10px 0; /* original */
+}
+
+.nav-anchor-credits  {
+  padding: 0 0 10px 0; /* original */
+  position: absolute;
+  bottom: 5%;
+  left: 20;
+}
+
+.button-theme {
+  color: white;
+  position: fixed;
+  z-index: 10;
+  top: 6%;
+  right: 3%;
+  @media (max-width: 1600px){
+    top: 5%;
+    right: 3%;
+   }
+  @media (max-width: 1440px){
+   top: 5%;
+   right: 4%;
+  }
+  @media (max-width: 1024px){
+    top: 5%;
+    right: 5%;
+   }
+   @media (max-width: 768px){
+    top: 5%;
+    right: 6.5%;
+   }
+   @media (max-width: 480px){
+    top: 5%;
+    right: 12%;
+   }
+   @media (max-width: 320px){
+    top: 5%;
+    right: 15%;
+   }
+}
+
+/* Projects styles */
+.project-image-style{
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.project-image-style:hover {
+  cursor: pointer;
+}
+
+.hover-project figure img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+  max-height: 125px;
+}
+.hover-project figure:hover img {
+	-webkit-transform: scale(1.2);
+	transform: scale(1.2);
+}
+
+.proyect-info {
+  align-items: center;
+}
+
+.github-projects {
+  text-align: center;
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  text-decoration: underline;
+}
+
+/* Contact styles */
+.email-buttons {
+  margin-left: 32%;
+  margin-top: 30px;
+  width: 300px;
+  @media (max-width: 1024px){
+    margin-left: 22%;
+  }
+  @media (max-width: 768px){
+    margin-left: 2%;
+  }
+  @media (max-width: 480px){
+    margin-left: 8%;
+    width: 220px;
+  }
+  @media (max-width: 320px){
+    margin-left: 8%;
+    width: 200px;
+  }
+}
+
