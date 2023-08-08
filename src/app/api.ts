@@ -10,7 +10,7 @@ import chakra from '../images/chakra.png'
 import kingpudding from '../images/kingpudding.jpg'
 import mustWatch from '../images/mustWatch.jpg'
 import gamingStore from '../images/gamingStore.jpg'
-import quizAboutEverything from '../images/quizAboutEverything.png'
+//import quizAboutEverything from '../images/quizAboutEverything.png'
  
 export const myTechnologies = [
     {
@@ -61,11 +61,14 @@ export const myTechnologies = [
       image: gamingStore,
       description: "An ecommerce simulator for purchasing gaming products",
       url: "https://gaming-store.netlify.app/"
-    },
-    {
+    }
+  ]
+
+  /*
+   {
       name: "quiz about everything",
       image: quizAboutEverything,
       description: "A fun Trivia-Quiz game!",
       url: "https://quiz-about-everything.netlify.app/"
     }
-  ]
+  */
