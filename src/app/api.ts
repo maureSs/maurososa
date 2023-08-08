@@ -10,7 +10,7 @@ import chakra from '../images/chakra.png'
 import kingpudding from '../images/kingpudding.jpg'
 import mustWatch from '../images/mustWatch.jpg'
 import gamingStore from '../images/gamingStore.jpg'
-import quizabouteverything from '../images/quizabouteverything.png'
+import quizabouteverything from '../images/quizAboutEverything.png'
  
 export const myTechnologies = [
     {
