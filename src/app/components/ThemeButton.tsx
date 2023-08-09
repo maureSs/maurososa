@@ -1,11 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { IconButton, useColorMode, useColorModeValue } from '@chakra-ui/react'
 import { SunIcon, MoonIcon } from '@chakra-ui/icons'
 
 const ThemeButton = () => {
-  const { toggleColorMode } = useColorMode()
-  const { colorMode } = useColorMode()
+  const { colorMode, toggleColorMode } = useColorMode()
 
   return (
     <AnimatePresence mode='wait' initial={false}>

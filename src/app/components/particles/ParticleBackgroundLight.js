@@ -1,8 +1,7 @@
 'use client'
 import React from 'react'
 import Particles from 'react-particles';
-import particlesConfig from './particle-config';
-//import particlesConfigLight from './particle-config-light';
+import particlesConfigLight from './particle-config-light';
 import { useCallback } from "react";
 //import type { Container, Engine } from "tsparticles-engine";
 //import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
@@ -30,7 +29,7 @@ import { loadSlim } from "tsparticles-slim"; // if you are going to use `loadSli
          particlesLoaded="particlesLoaded"
          init={particlesInit} 
          loaded={particlesLoaded}
-         options={particlesConfig}
+         options={particlesConfigLight}
          height="100vh"
          width="100vh" />
     );
