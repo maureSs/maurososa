@@ -19,13 +19,14 @@ export interface ProjectInfo {
 function ProjectsComponent() {
   const [myData, setMyData] = useState<ProjectInfo[]>(myProjects)
 
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(0);
 
   const handleResize = () => {
     setWindowWidth(window.innerWidth);
   };
 
   useEffect(() => {
+    setWindowWidth(window.innerWidth);
     window.addEventListener('resize', handleResize);
 
     return () => {
