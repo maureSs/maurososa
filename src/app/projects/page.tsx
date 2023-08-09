@@ -7,17 +7,17 @@ import Link from 'next/link';
 // Api
 import { myProjects } from '../api'
 
-export type Root = Projects[]
+export type Root = ProjectInfo[]
 
-export interface Projects {
+export interface ProjectInfo {
   name: string;
-  image: string;
+  image: any;
   description: string;
   url: string;
 }
 
-function Projects() {
-  const [myData, setMyData] = useState<Projects[]>(myProjects)
+function ProjectsComponent() {
+  const [myData, setMyData] = useState<ProjectInfo[]>(myProjects)
 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -75,4 +75,4 @@ function Projects() {
   )
 }
 
-export default Projects;
+export default ProjectsComponent;
