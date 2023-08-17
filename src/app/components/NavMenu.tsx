@@ -17,6 +17,7 @@ function NavMenu({ colorMode }: { colorMode: 'light' | 'dark' }) {
     color={colorMode === 'dark' ? "white" : "black"}
     p={6}
     alignItems="flex-start"
+    className='nav-mobile-layout'
    >
     <Heading as='h2' fontSize="40px" mb={4}>Mauro Sosa</Heading>
     <Text mb={4} ml={1}>Frontend Developer</Text>

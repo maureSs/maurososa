@@ -7,14 +7,14 @@ import MyTechnologies  from '../components/MyTechnologies';
 
 function About() {
   return (
-    <Box w={[200, 300, 350, 500, 800]} ml={['-27%', '-10%', '15%' ,'15%' ,'15%']} mt={['120%', '110%', '0%' ,'0%' ,'0%']}> 
-      <Text fontSize={['12px', '12px', '20px', '20px', '20px']} textAlign='center' mb='5%'>
+    <Box w={[200, 300, 350, 500, 800]} ml={['-27%', '-10%', '15%' ,'15%' ,'15%']} mt={['20%', '110%', '0%' ,'0%' ,'0%']}> 
+      <Text fontSize={['10px', '12px', '20px', '20px', '20px']} textAlign={['right', 'center', 'center', 'center', 'center']} mb='5%'>
       Frontend developer from Buenos Aires, Argentina. I mainly work with React, Next.js and TypeScript but I love learning new technologies and tools.
       <br /> 24 y/o in love with technology.
       </Text>
-      <Text fontSize={['13px', '13px', '18px', '18px', '18px']} textAlign='center' mb="25px">Languages and technologies</Text>
+      <Text fontSize={['12px', '13px', '18px', '18px', '18px']} textAlign={['right', 'center', 'center', 'center', 'center']} mb="25px">Languages and technologies</Text>
       <MyTechnologies />
-      <Box mt='40px' fontSize={['12px', '12px', '16px', '16px', '16px']}>
+      <Box mt='40px' fontSize={['10px', '12px', '16px', '16px', '16px']}>
         <UnorderedList styleType='none'>
          <ListItem><b>2020-</b> Completed the freeCodeCamp Front-End Development Courses </ListItem>
          <ListItem><b>2021-</b> Worked as a freelancer</ListItem>
@@ -30,8 +30,8 @@ function About() {
         </UnorderedList>      
       </Box>
       <Box mt='20px' textAlign='right'>
-       <Heading as='h5' fontSize={['15px', '15px', '15px', '25px', '25px']}>I ♥</Heading><br />
-       <Text fontSize={['12px', '12px', '16px', '16px', '16px']}>Videogames, Music, Technology, Streaming, Coffee, Movies and tv shows, Sports, Girlfriend</Text>
+       <Heading as='h5' fontSize={['12px', '15px', '15px', '25px', '25px']}>I ♥</Heading><br />
+       <Text fontSize={['10px', '12px', '16px', '16px', '16px']}>Videogames, Music, Technology, Streaming, Coffee, Movies and tv shows, Sports, Girlfriend</Text>
       </Box>
     </Box>
   )

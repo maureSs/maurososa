@@ -57,15 +57,15 @@ function ProjectsComponent() {
       <Link href="https://github.com/maureSs" className="github-projects">Find all my projects on GitHub!</Link>
       </>
       ) : (
-       <Box w={[250, 300, 300, 500, 800]} ml={['-35%', '-20%', '25%' ,'25%' ,'25%']} mt='120%'>
-        <Heading as='h2' size='l' textAlign='center' mb='20px' fontSize='25px'>My projects</Heading>
+       <Box w={[250, 300, 300, 500, 800]} ml='-10%' mt='35%'>
+        <Heading as='h2' size='l' textAlign='right' mb='20px' fontSize='24px' mr='20%'>My projects</Heading>
         {myData.map((item, key) => (
         <GridItem key={key} colSpan={2} mb='20px' className='hover-project' style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           <Link href={item.url}>
           </Link>
          <Box className="project-info">
-          <Heading as='h3' size='l' textAlign='center' mb='10px' fontSize='18px'>{item.name}</Heading>
-          <Text textAlign='center' maxW='220px'>{item.description}</Text>
+          <Heading as='h3' size='l' textAlign='right' mb='10px' fontSize='18px'>{item.name}</Heading>
+          <Text textAlign='right' maxW='150px' fontSize='14px'>{item.description}</Text>
          </Box>
        </GridItem> 
       ))}
