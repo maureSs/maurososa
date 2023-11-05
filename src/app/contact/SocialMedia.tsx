@@ -11,7 +11,7 @@ import twitter from '../../images/twitter.png'
 const SocialMedia = () => {
   return (
    <Box>
-    <Heading as='h5' fontSize={['18px', '25px', '25px', '25px', '25px']} textAlign={['right', 'center', 'center', 'center', 'center']}>My social media</Heading>
+    <Heading as='h5' fontSize={['18px', '25px', '25px', '25px', '25px']} textAlign={['center', 'center', 'center', 'center', 'center']}>My social media</Heading>
     <UnorderedList styleType='none' display='flex' flexDir='row' justifyContent='center' p={8}>
      <ListItem>
       <Link href="https://www.linkedin.com/in/sosamauro/">
