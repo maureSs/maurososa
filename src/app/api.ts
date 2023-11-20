@@ -3,9 +3,10 @@ import ts from '../images/ts.svg'
 import js from '../images/js.svg'
 import next from '../images/next.png'
 import react from '../images/react.svg'
+import redux from '../images/redux.png'
 import firebase from '../images/firebase.png'
 import node from '../images/node.png'
-import chakra from '../images/chakra.png'
+import tailwind from '../images/tailwind.png'
 // projects
 import kingpudding from '../images/kingpudding.jpg'
 import mustWatch from '../images/mustWatch.jpg'
@@ -15,31 +16,43 @@ import quizAboutEverything from '../images/quizAboutEverything.jpg'
 export const myTechnologies = [
     {
        name: "TypeScript",
+       url: "https://www.typescriptlang.org/",
        image: ts
     },
     {
         name: "JavaScript",
+        url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
         image: js
      },
      {
         name: "Next.js",
+        url: "https://nextjs.org/",
         image: next
      },
      {
         name: "React.js",
+        url: "https://react.dev/",
         image: react
      },
      {
+        name: "Redux.js",
+        url: "https://redux.js.org/",
+        image: redux
+     },
+     {
         name: "Firebase",
+        url: "https://firebase.google.com/",
         image: firebase
      },
      {
         name: "Node.js",
+        url: "https://nodejs.org/en/",
         image: node
      },
      {
-        name: "Chakra UI",
-        image: chakra
+        name: "Tailwind CSS",
+        url: "https://tailwindcss.com/resources",
+        image: tailwind
      }
   ]
 

@@ -1,6 +1,7 @@
 import React, { useState }  from 'react'
 // Next
 import Image from 'next/image';
+import Link from 'next/link';
 // Api
 import { myTechnologies } from '../api';
 // Styles
@@ -10,6 +11,7 @@ export type Root = Technologies[]
 
 export interface Technologies {
   name: string;
+  url: string;
   image: string;
 }
 
@@ -21,7 +23,9 @@ export default function MyTechnologies() {
      <Grid templateColumns='repeat(5, 1fr)' gap={4} alignItems='center'>
         {myData.map((item, key) => (
           <GridItem key={key} colSpan={1} >
-           <Image src={item.image} width={60} height={60} alt={`${item.name} + ${key}`} />
+           <Link href={item.url}>
+            <Image src={item.image} width={60} height={60} alt={`${item.name} + ${key}`} />
+           </Link>
           </GridItem> 
         ))}   
       </Grid>
