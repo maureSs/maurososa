@@ -20,7 +20,7 @@ function NavMenu({ colorMode }: { colorMode: 'light' | 'dark' }) {
     className='nav-mobile-layout'
    >
     <Heading as='h2' fontSize="40px" mb={4}>Mauro Sosa</Heading>
-    <Text mb={4} ml={1}>Frontend Developer</Text>
+    <Text mb={4} ml={1}>Web Developer</Text>
     <Box display="flex" flexDir="column" mt="15%" fontSize="18px" className='anchor-container'>
       <Link href="/about" className='nav-anchor'>About</Link>
       <Link href="/projects" className='nav-anchor'>Projects</Link>
