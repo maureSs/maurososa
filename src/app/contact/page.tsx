@@ -12,7 +12,7 @@ function Contact() {
   const { colorMode } = useColorMode()
 
   return (
-    <Box w={[250, 300, 300, 500, 800]} ml={['-35%', '-20%', '25%' ,'25%' ,'25%']} mb='5%' mt={['100%', '90%', '0%' ,'0%' ,'0%']}>
+    <Box w={[250, 300, 300, 500, 800]} ml={['-10%', '-20%', '25%' ,'25%' ,'25%']} mb='5%' mt={['-30%', '90%', '0%' ,'0%' ,'0%']}>
      <SocialMedia />
      <Box display='flex' flexDir='column' justifyContent='center' className='email-buttons'>
       <ContactForm />

@@ -148,6 +148,11 @@ body {
    }
 }
 
+/* About styles */
+.techology-mobile-style {
+  width: 30px;
+}
+
 /* Projects styles */
 .project-image-style{
   border-radius: 20px;
@@ -197,12 +202,12 @@ body {
     margin-left: 2%;
   }
   @media (max-width: 480px){
-    margin-left: 8%;
-    width: 220px;
+    margin-left: 20%;
+    width: 150px;
   }
   @media (max-width: 320px){
     margin-left: 8%;
-    width: 200px;
+    width: 150px;
   }
 }
 

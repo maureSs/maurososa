@@ -1,4 +1,4 @@
-import React, { useState }  from 'react'
+import React, { useState, useEffect }  from 'react'
 // Next
 import Image from 'next/image';
 import Link from 'next/link';
@@ -18,8 +18,24 @@ export interface Technologies {
 export default function MyTechnologies() {
   const [myData, setMyData] = useState<Technologies[]>(myTechnologies)
 
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <>
+    {windowWidth > 767 ? (
      <Grid templateColumns='repeat(5, 1fr)' gap={4} alignItems='center'>
         {myData.map((item, key) => (
           <GridItem key={key} colSpan={1}>
@@ -29,6 +45,18 @@ export default function MyTechnologies() {
           </GridItem> 
         ))}   
       </Grid>
+      )
+      : (
+        <Grid templateColumns='repeat(2, 1fr)' gap={2} alignItems='center' >
+        {myData.map((item, key) => (
+          <GridItem key={key} colSpan={1} > 
+           <Link href={item.url}>
+             <Image src={item.image} width={30} height={30} alt={`${item.name} + ${key}`} />
+           </Link>
+          </GridItem> 
+        ))}   
+      </Grid>
+      )}
    </>
   )
 }
