@@ -4,7 +4,7 @@ import js from '../images/js.svg'
 import next from '../images/next.png'
 import react from '../images/react.svg'
 import redux from '../images/redux.png'
-import firebase from '../images/firebase.png'
+import mongodb from '../images/mongodb.png'
 import node from '../images/node.png'
 import tailwind from '../images/tailwind.png'
 import express from '../images/express.png'
@@ -41,11 +41,6 @@ export const myTechnologies = [
         image: redux
      },
      {
-        name: "Firebase",
-        url: "https://firebase.google.com/",
-        image: firebase
-     },
-     {
         name: "Node.js",
         url: "https://nodejs.org/en/",
         image: node
@@ -55,6 +50,11 @@ export const myTechnologies = [
       url: "https://expressjs.com/",
       image: express
      },
+     {
+      name: "MongoDB",
+      url: "https://www.mongodb.com/",
+      image: mongodb
+   },
      {
         name: "Tailwind CSS",
         url: "https://tailwindcss.com/resources",
