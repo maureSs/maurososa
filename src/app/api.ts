@@ -7,6 +7,7 @@ import redux from '../images/redux.png'
 import firebase from '../images/firebase.png'
 import node from '../images/node.png'
 import tailwind from '../images/tailwind.png'
+import express from '../images/express.png'
 // projects
 import kingpudding from '../images/kingpudding.jpg'
 import mustWatch from '../images/mustWatch.jpg'
@@ -48,6 +49,11 @@ export const myTechnologies = [
         name: "Node.js",
         url: "https://nodejs.org/en/",
         image: node
+     },
+     {
+      name: "Express.js",
+      url: "https://expressjs.com/",
+      image: express
      },
      {
         name: "Tailwind CSS",

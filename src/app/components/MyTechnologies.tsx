@@ -5,7 +5,7 @@ import Link from 'next/link';
 // Api
 import { myTechnologies } from '../api';
 // Styles
-import { Grid, GridItem } from '@chakra-ui/react';
+import { Grid, GridItem, Text } from '@chakra-ui/react';
 
 export type Root = Technologies[]
 
@@ -17,8 +17,8 @@ export interface Technologies {
 
 export default function MyTechnologies() {
   const [myData, setMyData] = useState<Technologies[]>(myTechnologies)
-
   const [windowWidth, setWindowWidth] = useState(0);
+  const [isHovering, setIsHovering] = useState(false);
 
   const handleResize = () => {
     setWindowWidth(window.innerWidth);
@@ -33,14 +33,25 @@ export default function MyTechnologies() {
     };
   }, []);
 
+  const handleMouseOver = () => {
+    setIsHovering(true);
+  };
+
+  const handleMouseOut = () => {
+    setIsHovering(false);
+  };
+
   return (
     <>
-    {windowWidth > 480 ? (
+    {windowWidth > 767 ? (
      <Grid templateColumns='repeat(5, 1fr)' gap={4} alignItems='center'>
         {myData.map((item, key) => (
           <GridItem key={key} colSpan={1}>
            <Link href={item.url}>
             <Image src={item.image} width={60} height={60} alt={`${item.name} + ${key}`} />
+              <Text mt='5%' ml='-5%'>
+                {item.name}
+              </Text>
            </Link>
           </GridItem> 
         ))}   
