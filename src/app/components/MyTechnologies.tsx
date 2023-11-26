@@ -18,7 +18,6 @@ export interface Technologies {
 export default function MyTechnologies() {
   const [myData, setMyData] = useState<Technologies[]>(myTechnologies)
   const [windowWidth, setWindowWidth] = useState(0);
-  const [isHovering, setIsHovering] = useState(false);
 
   const handleResize = () => {
     setWindowWidth(window.innerWidth);
@@ -32,14 +31,6 @@ export default function MyTechnologies() {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
-
-  const handleMouseOver = () => {
-    setIsHovering(true);
-  };
-
-  const handleMouseOut = () => {
-    setIsHovering(false);
-  };
 
   return (
     <>
