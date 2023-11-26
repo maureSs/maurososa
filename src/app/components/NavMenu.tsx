@@ -40,7 +40,7 @@ function NavMenu({ colorMode }: { colorMode: 'light' | 'dark' }) {
     <Box display="flex" 
          flexDir={windowWidth > 480 ? "column" : "row"} 
          mt={windowWidth > 480 ? "15%" : "5%"} 
-         gap={4}
+         gap={windowWidth > 480 ? 0 : 4}
          fontSize="18px" 
          className='anchor-container'
     >

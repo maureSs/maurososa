@@ -7,7 +7,7 @@ import MyTechnologies  from '../components/MyTechnologies';
 
 function About() {
   return (
-    <Box w={[220, 300, 350, 500, 750]} ml={['15%', '-10%', '15%' ,'10%' ,'10%']} mt={['0%', '110%', '0%' ,'0%' ,'0%']}> 
+    <Box w={[220, 300, 350, 500, 750]} ml={['15%', '-10%', '15%' ,'10%' ,'15%']} mt={['0%', '110%', '0%' ,'0%' ,'0%']}> 
       <Text fontSize={['14px', '12px', '20px', '20px', '20px']} textAlign={['center', 'center', 'center', 'center', 'center']} mb='5%'>
       25 y/o web developer from Buenos Aires, Argentina. I mainly work with React, Next.js and TypeScript but I love learning new technologies and tools.
       </Text>
