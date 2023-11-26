@@ -1,21 +1,21 @@
 'use client'
 import React from 'react';
 // Chakra Ui and icons 
-import { Box, Text, Link, Heading, ListItem, UnorderedList, } from '@chakra-ui/react';
+import { Box, Text, Heading } from '@chakra-ui/react';
 // Components
 import MyTechnologies  from '../components/MyTechnologies';
 
 function About() {
   return (
-    <Box w={[180, 300, 350, 500, 750]} ml={['10%', '-10%', '15%' ,'10%' ,'10%']} mt={['-20%', '110%', '0%' ,'0%' ,'0%']}> 
-      <Text fontSize={['10px', '12px', '20px', '20px', '20px']} textAlign={['right', 'center', 'center', 'center', 'center']} mb='5%'>
+    <Box w={[220, 300, 350, 500, 750]} ml={['15%', '-10%', '15%' ,'10%' ,'10%']} mt={['0%', '110%', '0%' ,'0%' ,'0%']}> 
+      <Text fontSize={['14px', '12px', '20px', '20px', '20px']} textAlign={['center', 'center', 'center', 'center', 'center']} mb='5%'>
       25 y/o web developer from Buenos Aires, Argentina. I mainly work with React, Next.js and TypeScript but I love learning new technologies and tools.
       </Text>
-      <Text fontSize={['12px', '13px', '18px', '18px', '20px']} textAlign={['right', 'center', 'center', 'center', 'center']} mb="25px">Languages and technologies</Text>
+      <Text fontSize={['12px', '13px', '18px', '18px', '20px']} textAlign={['center', 'center', 'center', 'center', 'center']} mb="25px">Languages and technologies</Text>
       <MyTechnologies />
       <Box mt='20px' textAlign='right'>
        <Heading as='h5' fontSize={['12px', '15px', '15px', '25px', '25px']}>I ♥</Heading><br />
-       <Text fontSize={['10px', '12px', '16px', '16px', '16px']}>Videogames, Music, Technology, Streaming, Coffee, Movies and tv shows, Sports, Girlfriend</Text>
+       <Text fontSize={['12px', '12px', '16px', '16px', '16px']}>Videogames, Music, Technology, Streaming, Coffee, Movies and tv shows, Sports, Girlfriend</Text>
       </Box>
     </Box>
   )

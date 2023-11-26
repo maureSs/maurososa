@@ -31,17 +31,17 @@ const SocialMedia = () => {
     <UnorderedList styleType='none' display='flex' flexDir='row' justifyContent='center' p={windowWidth > 767 ? 8 : 4}>
      <ListItem>
       <Link href="https://www.linkedin.com/in/sosamauro/">
-       <Image src={linkedin} width={windowWidth > 767 ? 60 : 30} height={windowWidth > 767 ? 60 : 30} alt="ln-icon" />
+       <Image src={linkedin} width={windowWidth > 480 ? 60 : 40} height={windowWidth > 480 ? 60 : 40} alt="ln-icon" />
       </Link>
      </ListItem>
      <ListItem ml={8}>
       <Link href="https://www.instagram.com/maurososaa/">
-       <Image src={instagram} width={windowWidth > 767 ? 60 : 30} height={windowWidth > 767 ? 60 : 30} alt="ig-icon" />
+       <Image src={instagram} width={windowWidth > 480 ? 60 : 40} height={windowWidth > 480 ? 60 : 40} alt="ig-icon" />
       </Link>
      </ListItem>
      <ListItem ml={8}>
       <Link href="https://twitter.com/maurososaa_">
-       <Image src={twitter} width={windowWidth > 767 ? 60 : 30} height={windowWidth > 767 ? 60 : 30} alt="tw-icon" />
+       <Image src={twitter} width={windowWidth > 480 ? 60 : 40} height={windowWidth > 480 ? 60 : 40} alt="tw-icon" />
       </Link>
      </ListItem>
     </UnorderedList>

@@ -34,7 +34,7 @@ export default function MainContainer({children}:{children: React.ReactNode }) {
       </Box>
      }
      <NavMenu colorMode={colorMode} />
-     {children}
+      {children}
     </Box>
   )
 }

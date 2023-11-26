@@ -71,6 +71,9 @@ body {
   width: 70%;  
   height: 100%;
   /*border: 1px solid red;*/
+  @media (max-width: 480px){
+    width: 100%;
+  }
 }
 
 /* NavMenu styles */
@@ -185,9 +188,6 @@ body {
   width: 100%;
   margin-top: 20px;
   text-decoration: underline;
-  @media (max-width: 480px){
-    display: none;
-  }
 }
 
 /* Contact styles */
@@ -202,12 +202,14 @@ body {
     margin-left: 2%;
   }
   @media (max-width: 480px){
-    margin-left: 20%;
-    width: 150px;
+    margin-left: 10%;
+    margin-top: 20px;
+    width: 220px;
   }
   @media (max-width: 320px){
     margin-left: 8%;
-    width: 150px;
+    margin-top: 20px;
+    width: 200px;
   }
 }
 

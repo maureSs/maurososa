@@ -36,7 +36,7 @@ function ProjectsComponent() {
 
   return (
     <>
-      {windowWidth > 767 ? (
+      {windowWidth > 480 ? (
       <>
       <Heading as='h2' size='xl' textAlign='center' mb='60px' ml='3%' fontSize='32px'>My projects</Heading>
       <Grid templateColumns='repeat(5, 1fr)' gap={12} ml='20%'>
@@ -57,15 +57,15 @@ function ProjectsComponent() {
       <Link href="https://github.com/maureSs" className="github-projects">Find all my projects on GitHub!</Link>
       </>
       ) : (
-       <Box w={[250, 300, 300, 500, 800]} ml='-10%' mt='35%'>
-        <Heading as='h2' size='l' textAlign='right' mb='20px' fontSize='24px' mr='20%'>My projects</Heading>
+       <Box w={[250, 300, 300, 500, 800]} ml='15%' mt='35%'>
+        <Heading as='h2' size='l' textAlign='center' mb='20px' fontSize='24px'>My projects</Heading>
         {myData.map((item, key) => (
         <GridItem key={key} colSpan={2} mb='20px' className='hover-project' style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-          <Link href={item.url}>
-          </Link>
          <Box className="project-info">
-          <Heading as='h3' size='l' textAlign='right' mb='10px' fontSize='18px'>{item.name}</Heading>
-          <Text textAlign='right' maxW='150px' fontSize='14px'>{item.description}</Text>
+          <Link href={item.url}>
+           <Heading as='h3' size='l' textAlign='center' mb='10px' fontSize='18px'>{item.name}</Heading>
+          </Link>
+          <Text textAlign='center' maxW='200px' fontSize='14px'>{item.description}</Text>
          </Box>
        </GridItem> 
       ))}

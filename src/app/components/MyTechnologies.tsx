@@ -35,7 +35,7 @@ export default function MyTechnologies() {
 
   return (
     <>
-    {windowWidth > 767 ? (
+    {windowWidth > 480 ? (
      <Grid templateColumns='repeat(5, 1fr)' gap={4} alignItems='center'>
         {myData.map((item, key) => (
           <GridItem key={key} colSpan={1}>
@@ -47,7 +47,7 @@ export default function MyTechnologies() {
       </Grid>
       )
       : (
-        <Grid templateColumns='repeat(2, 1fr)' gap={2} alignItems='center' >
+        <Grid templateColumns='repeat(3, 1fr)' gap={2} alignItems='center' ml='10%'>
         {myData.map((item, key) => (
           <GridItem key={key} colSpan={1} > 
            <Link href={item.url}>
