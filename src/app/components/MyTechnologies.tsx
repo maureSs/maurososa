@@ -5,7 +5,7 @@ import Link from 'next/link';
 // Api
 import { myTechnologies } from '../api';
 // Styles
-import { Grid, GridItem, Text } from '@chakra-ui/react';
+import { Box, Grid, GridItem, Text } from '@chakra-ui/react';
 
 export type Root = Technologies[]
 
@@ -39,10 +39,12 @@ export default function MyTechnologies() {
         {myData.map((item, key) => (
           <GridItem key={key} colSpan={1}>
            <Link href={item.url}>
-            <Image src={item.image} width={60} height={60} alt={`${item.name} + ${key}`} />
-              <Text mt='5%' ml='-5%'>
-                {item.name}
-              </Text>
+            <Box textAlign="center" display="flex" flexDir="column" alignItems="center"> 
+             <Image src={item.image} width={60} height={60} alt={`${item.name} + ${key}`} />
+               <Text mt='5%' fontWeight="semibold">
+                 {item.name}
+               </Text>
+            </Box> 
            </Link>
           </GridItem> 
         ))}   
