@@ -22,28 +22,3 @@ export default function Home() {
     </Box>
   )
 }
-
-/*
- const [showFirstIcon, setFirstShowIcon] = useState<boolean>(false)
-const [showSecondIcon, setSecondShowIcon] = useState<boolean>(false)
-
- <Flex display='flex' flexDirection="column" alignItems="center" height="auto" color="white" mr='40%'>
-       <Heading as='h1' fontSize="45px" mb='50px'>Amo a mi novia</Heading>
-       <Box mb='20px'>
-        <Link href="/main-menu" onMouseOver={() => setFirstShowIcon(!showFirstIcon)} onMouseOut={() => setFirstShowIcon(!showFirstIcon)}>
-          <Text fontSize="35px">
-          {showFirstIcon && <Icon as={GiBroadsword} fontSize="35px" mr={2} />}
-           Start
-          </Text>
-        </Link> 
-        </Box>
-        <Box>
-        <Link href="/credits" onMouseOver={() => setSecondShowIcon(!showSecondIcon)} onMouseOut={() => setSecondShowIcon(!showSecondIcon)}>         
-          <Text fontSize="35px">
-           {showSecondIcon && <Icon as={GiBroadsword} fontSize="35px" mr={2} />} 
-           Credits
-          </Text>
-        </Link>
-       </Box>
-    </Flex>
-*/
