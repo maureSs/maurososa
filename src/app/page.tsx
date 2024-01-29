@@ -8,17 +8,17 @@ export default function Home() {
 
   const { colorMode, toggleColorMode } = useTheme();
 
-  useEffect(() => {
+  /*useEffect(() => {
     const redirectTimer = setTimeout(() => {
       router.push('/main-menu');
     }, 2500); 
 
     return () => clearTimeout(redirectTimer);
-  }, [router]);
+  }, [router]);¨*/
 
   return (
-    <div className='inner-content pt-60'>
-      <h2 className={`pl-70 text-3xl font-bold ${colorMode === 'dark' ? 'text-white' : 'text-black'}`}>Mauro Sosa Portfolio</h2>
+    <div className='inner-content-home'>
+      <h2 className={`w-full text-3xl font-bold ${colorMode === 'dark' ? 'text-white' : 'text-black'}`}>Mauro Sosa Portfolio</h2>
     </div>
   )
 }

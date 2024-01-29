@@ -118,6 +118,16 @@ body {
   }
 }
 
+.inner-content-home {
+  margin-top: 25%;
+  padding-left: 15%;
+  @media (max-width: 480px) {
+    margin-top: 25%;
+    padding: 30px;
+    text-align: center;
+  }
+}
+
 /* NavMenu styles */
 .nav-anchor {
   padding: 0 0 10px 0; /* original */
