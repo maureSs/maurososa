@@ -8,13 +8,13 @@ export default function Home() {
 
   const { colorMode, toggleColorMode } = useTheme();
 
-  /*useEffect(() => {
+  useEffect(() => {
     const redirectTimer = setTimeout(() => {
       router.push('/main-menu');
     }, 2500); 
 
     return () => clearTimeout(redirectTimer);
-  }, [router]);¨*/
+  }, [router]);¨
 
   return (
     <div className='inner-content-home'>
