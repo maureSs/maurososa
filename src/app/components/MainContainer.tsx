@@ -22,7 +22,7 @@ export default function MainContainer({children}:{children: React.ReactNode }) {
        <ThemeButton />
       </div>
      }
-     <NavMenu colorMode={colorMode} />
+      <NavMenu colorMode={colorMode} />
        {children}
     </div>
   )

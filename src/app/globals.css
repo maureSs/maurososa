@@ -23,7 +23,10 @@ body {
   min-height: calc(100vh - 80px);
   border: 1px solid rgb(255, 255, 255, 0.5);
   color: white;
-  @media (max-width: 480px) {
+}
+
+@media (max-width: 480px) {
+  .root-layout {
     flex-direction: column;
     height: auto;
     margin: 20px;
@@ -41,7 +44,10 @@ body {
   min-height: calc(100vh - 80px);
   border: 1px solid rgba(0, 0, 0, 0.5);
   color: black;
-  @media (max-width: 480px) {
+}
+
+@media (max-width: 480px) {
+  .light-layout {
     flex-direction: column;
     height: auto;
     margin: 20px;
