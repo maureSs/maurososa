@@ -3,10 +3,6 @@ import React, { useState, useEffect } from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
 
-import linkedin  from '../../../public/assets/images/linkedin.png'
-import instagram from '../../../public/assets/images/instagram.png'
-import twitter from '../../../public/assets/images/twitter.png'
-
 const SocialMedia = () => {
 
   const [windowWidth, setWindowWidth] = useState(0);
