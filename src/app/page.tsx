@@ -14,7 +14,7 @@ export default function Home() {
     }, 2500); 
 
     return () => clearTimeout(redirectTimer);
-  }, [router]);¨
+  }, [router]);
 
   return (
     <div className='inner-content-home'>
