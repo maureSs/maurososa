@@ -1,9 +1,9 @@
 'use client'
 import React, {useState, useEffect} from 'react'
-// Next
+
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-// Chakra UI
+
 import { Flex, Box, Heading, Text } from '@chakra-ui/react'
 
 function NavMenu({ colorMode }: { colorMode: 'light' | 'dark' }) {

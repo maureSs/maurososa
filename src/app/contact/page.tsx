@@ -1,10 +1,10 @@
 'use client'
 import React from 'react'
-// Next 
+
 import Link from 'next/link';
-// Chakra and styles
+
 import { Box, Button, useColorMode } from '@chakra-ui/react';
-// Components
+
 import SocialMedia from './SocialMedia'
 import ContactForm from './ContactForm';
 

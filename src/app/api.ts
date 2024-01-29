@@ -1,18 +1,18 @@
 // technologies
-import ts from '../images/ts.svg'
-import js from '../images/js.svg'
-import next from '../images/next.png'
-import react from '../images/react.png'
-import redux from '../images/redux.png'
-import mongodb from '../images/mongodb.png'
-import node from '../images/node.png'
-import tailwind from '../images/tailwind.png'
-import express from '../images/express.png'
+import ts from '../../public/assets/images/ts.svg'
+import js from '../../public/assets/images/js.svg'
+import next from '../../public/assets/images/next.png'
+import react from '../../public/assets/images/react.png'
+import redux from '../../public/assets/images/redux.png'
+import mongodb from '../../public/assets/images/mongodb.png'
+import node from '../../public/assets/images/node.png'
+import tailwind from '../../public/assets/images/tailwind.png'
+import express from '../../public/assets/images/express.png'
 // projects
-import kingpudding from '../images/kingpudding.jpg'
-import mustWatch from '../images/mustWatch.jpg'
-import gamingStore from '../images/gamingStore.jpg'
-import quizAboutEverything from '../images/quizAboutEverything.jpg'
+import kingpudding from '../../public/assets/images/kingpudding.jpg'
+import mustWatch from '../../public/assets/images/mustWatch.jpg'
+import gamingStore from '../../public/assets/images/gamingStore.jpg'
+import quizAboutEverything from '../../public/assets/images/quizAboutEverything.jpg'
  
 export const myTechnologies = [
     {

@@ -9,14 +9,6 @@ import ParticleBackground from './particles/ParticleBackground'
 import ParticleBackgroundLight from './particles/ParticleBackgroundLight'
 import NavMenu from '../components/NavMenu'
 
-/*const breakpoints = {
-  sm: '30em', // 480px
-  md: '48em', // 768px
-  lg: '62em', // 992px
-  xl: '80em', // 1280px
-  '2xl': '96em', // 1536px
-}*/
-
 export default function MainContainer({children}:{children: React.ReactNode }) {
   // Dark mode - Light mode 
   const { colorMode } = useColorMode()
@@ -26,7 +18,7 @@ export default function MainContainer({children}:{children: React.ReactNode }) {
   return (
     <Box className={pathname === '/' ? 'home-layout' : colorMode === 'dark' ? "root-layout" : "light-layout"}>
      {colorMode === 'dark' ?
-     <ParticleBackground /*colorMode={colorMode}*/ />
+     <ParticleBackground />
      : <ParticleBackgroundLight />}
      {pathname !== '/' && 
       <Box className="button-theme">

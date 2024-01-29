@@ -1,10 +1,10 @@
 import React, { useState, useEffect }  from 'react'
-// Next
+
 import Image from 'next/image';
 import Link from 'next/link';
-// Api
+
 import { myTechnologies } from '../api';
-// Styles
+
 import { Box, Grid, GridItem, Text } from '@chakra-ui/react';
 
 export type Root = Technologies[]

@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react'
-// Next 
+
 import Image from 'next/image';
 import Link from 'next/link';
-// Chakra and styles
-import { Box, Button, Heading, ListItem, Text, UnorderedList } from '@chakra-ui/react';
-import linkedin  from '../../images/linkedin.png'
-import instagram from '../../images/instagram.png'
-import twitter from '../../images/twitter.png'
+
+import { Box, Heading, ListItem, UnorderedList } from '@chakra-ui/react';
+import linkedin  from '../../../public/assets/images/linkedin.png'
+import instagram from '../../../public/assets/images/instagram.png'
+import twitter from '../../../public/assets/images/twitter.png'
 
 const SocialMedia = () => {
 

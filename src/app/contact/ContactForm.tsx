@@ -9,9 +9,7 @@ import { Button, Modal, ModalOverlay, ModalContent,
   ModalCloseButton, 
   FormControl,
   FormLabel,
-  FormErrorMessage,
   Input,
-  FormHelperText, 
   Textarea} from '@chakra-ui/react';
 
   function ContactForm() {
@@ -28,7 +26,7 @@ import { Button, Modal, ModalOverlay, ModalContent,
         >
             Contact Form
         </Button>
-        <Modal isOpen={isOpen} onClose={onClose}>
+         <Modal isOpen={isOpen} onClose={onClose}>
           <ModalOverlay  />
           <ModalContent p={8} bgColor={colorMode === 'dark' ? "#121111" : "#FFFFFF"}>
             <ModalHeader textAlign='center'>Complete the form</ModalHeader>
