@@ -4,9 +4,8 @@ import React, {useState, useEffect} from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
-import { Flex, Box, Heading, Text } from '@chakra-ui/react'
 
-function NavMenu({ colorMode }: { colorMode: 'light' | 'dark' }) {
+function NavMenu({ colorMode }: { colorMode: string }) {
   const pathname = usePathname()
 
   const [windowWidth, setWindowWidth] = useState(0);
@@ -25,31 +24,24 @@ function NavMenu({ colorMode }: { colorMode: 'light' | 'dark' }) {
   }, []);
 
   return (
-   <Flex
-    style={pathname === '/' ? {display: 'none'} : {display:'flex'}}
-    flexDirection={windowWidth > 480 ? "column" : "column"}
-    w={windowWidth > 480 ? "30%" : "80%"}
-    h={windowWidth > 480 ? '90vh' : '25vh'}
-    color={colorMode === 'dark' ? "white" : "black"}
-    p={6}
-    alignItems="flex-start"
-    className='nav-mobile-layout'
-   >
-    <Heading as='h2' fontSize="40px" mb={4}>Mauro Sosa</Heading>
-    <Text mb={4} ml={1}>Web Developer</Text>
-    <Box display="flex" 
-         flexDir={windowWidth > 480 ? "column" : "row"} 
-         mt={windowWidth > 480 ? "15%" : "5%"} 
-         gap={windowWidth > 480 ? 0 : 4}
-         fontSize="18px" 
-         className='anchor-container'
+   <div style={pathname === '/' ? {display: 'none'} : {display:'flex'}} 
+        className={`flex flex-col nav-mobile-layout 
+        w-${windowWidth > 480 ? '30' : '80'}vh h-${windowWidth > 480 ? '90' : '25'}vh 
+        ${colorMode === 'dark' ? 'text-white' : 'text-black'}
+        self-start p-8 pt-12`}
     >
+    <h2 className="text-4xl mb-4 font-bold">Mauro Sosa</h2>
+    <p className="mb-4 ml-1">Web Developer</p>
+    <div className={`flex ${windowWidth > 480 ? 'flex-col' : 'flex-row'} 
+      md:mt-8 lg:mt-12 text-lg bg-slate-100 md:bg-transparent
+      ${windowWidth < 480 && 'fixed top-5 left-10 border-2 rounded-full' } 
+      `}>
       <Link href="/about" className='nav-anchor'>About</Link>
       <Link href="/projects" className='nav-anchor'>Projects</Link>
       <Link href="/contact" className='nav-anchor'>Contact</Link>
       <Link href="/credits" className='nav-anchor-credits'>Credits</Link>
-    </Box>
-   </Flex>
+    </div>
+   </div>
   )
 }
 

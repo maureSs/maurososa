@@ -3,27 +3,22 @@ import React from 'react'
 
 import Link from 'next/link';
 
-import { Box, Button, useColorMode } from '@chakra-ui/react';
-
 import SocialMedia from './SocialMedia'
 import ContactForm from './ContactForm';
 
 function Contact() {
-  const { colorMode } = useColorMode()
-
   return (
-    <Box w={[250, 300, 300, 500, 800]} ml={['7%', '-20%', '25%' ,'25%' ,'25%']} mb='5%' mt={['20%', '90%', '0%' ,'0%' ,'0%']}>
-     <SocialMedia />
-     <Box display='flex' flexDir='column' justifyContent='center' className='email-buttons'>
+    <div className='inner-content'>
+    <SocialMedia />
+    <div className="flex flex-col justify-center space-y-4 email-buttons">
       <ContactForm />
-      <Button 
-       bgColor={colorMode === 'dark' ? 'brand' : '#76A8CA'}
-       _hover={colorMode === 'dark' ? { bg: "#3A3B3C" } : { bg: "#92C1E1" }}
+      <button
+        className="bg-brand hover:bg-[#3A3B3C] dark:bg-[#76A8CA] dark:hover:bg-[#3A3B3C] text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline"
       >
         <Link href="mailto:maurososa118@gmail.com">Send me an email</Link>
-      </Button>
-     </Box>
-    </Box>
+      </button>
+    </div>
+  </div>
   )
 }
 

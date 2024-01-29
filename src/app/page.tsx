@@ -1,24 +1,24 @@
 'use client'
 import React, { useEffect } from 'react'
 import { useRouter } from 'next/navigation';
-import { Box, Heading, useColorMode } from '@chakra-ui/react';
+import { useTheme } from './theme';
 
 export default function Home() {
   const router = useRouter();
 
-  const { colorMode } = useColorMode()
+  const { colorMode, toggleColorMode } = useTheme();
 
   useEffect(() => {
     const redirectTimer = setTimeout(() => {
-      router.push('/main-menu'); // Cambia 'nueva-ruta' por la ruta a la que deseas redirigir
+      router.push('/main-menu');
     }, 2500); 
 
-    return () => clearTimeout(redirectTimer); // Limpiar el temporizador al desmontar el componente
+    return () => clearTimeout(redirectTimer);
   }, [router]);
 
   return (
-    <Box w={[200, 300, 400, 600, 900]} ml='15%'>
-      <Heading as='h2' id='main-title' color={colorMode === 'dark' ? 'white' : 'black'}>Mauro Sosa Portfolio</Heading>
-    </Box>
+    <div className='inner-content pt-60'>
+      <h2 className={`pl-70 text-3xl font-bold ${colorMode === 'dark' ? 'text-white' : 'text-black'}`}>Mauro Sosa Portfolio</h2>
+    </div>
   )
 }

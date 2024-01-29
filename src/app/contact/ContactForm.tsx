@@ -1,57 +1,88 @@
 'use client'
-import React from 'react'
-import { Button, Modal, ModalOverlay, ModalContent,
-  useColorMode, 
-  ModalHeader,
-  useDisclosure,
-  ModalFooter,
-  ModalBody,
-  ModalCloseButton, 
-  FormControl,
-  FormLabel,
-  Input,
-  Textarea} from '@chakra-ui/react';
+import React, { useState } from 'react'
 
   function ContactForm() {
-    const { isOpen, onOpen, onClose } = useDisclosure()
-    const { colorMode } = useColorMode()
+    const [isModalOpen, setModalOpen] = useState(false);
+
+    const openModal = () => {
+      setModalOpen(true);
+    };
+  
+    const closeModal = () => {
+      setModalOpen(false);
+    };
 
     return (
-       <>
-        <Button 
-         onClick={onOpen} 
-         mb='40px' 
-         bgColor={colorMode === 'dark' ? "brand" : "#76A8CA"}
-         _hover={colorMode === 'dark' ? { bg: "#3A3B3C" } : { bg: "#92C1E1" }}
-        >
+        <>
+          <button
+            onClick={openModal}
+            className="mb-8 bg-brand hover:bg-[#3A3B3C] dark:bg-[#76A8CA] dark:hover:bg-[#3A3B3C] text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          >
             Contact Form
-        </Button>
-         <Modal isOpen={isOpen} onClose={onClose}>
-          <ModalOverlay  />
-          <ModalContent p={8} bgColor={colorMode === 'dark' ? "#121111" : "#FFFFFF"}>
-            <ModalHeader textAlign='center'>Complete the form</ModalHeader>
-            <ModalCloseButton />
-            <ModalBody textAlign='center'>
-             <FormControl isRequired>
-              <FormLabel>Name</FormLabel>
-              <Input placeholder='Name' />
-              <FormLabel>Email</FormLabel>
-              <Input type='email' placeholder='Email' />
-              <FormLabel>Subject</FormLabel>
-              <Input placeholder='Subject' />
-              <FormLabel>Message</FormLabel>
-              <Textarea placeholder='Message' h='90px' resize="vertical" maxHeight='300px' />
-              <ModalFooter mt='10px'>
-               <Button mr={3} onClick={onClose}>
-                Close
-               </Button>
-               <Button colorScheme='blue' type='submit'>Send me an email</Button>
-              </ModalFooter>
-             </FormControl>
-            </ModalBody>
-          </ModalContent>
-        </Modal>
-       </>
+          </button>
+          {isModalOpen && (
+            <div className="fixed inset-0 z-50 flex items-center justify-center text-black">
+              <div className="absolute inset-0 bg-black opacity-75"></div>
+              <div className="bg-white p-8 rounded-lg z-50">
+                <h2 className="text-center mb-4 text-xl font-bold">Complete the form</h2>
+                <div className="text-center">
+                  <form>
+                    <div className="mb-4">
+                      <label htmlFor="name">Name</label>
+                      <input
+                        type="text"
+                        id="name"
+                        placeholder="Name"
+                        className="w-full p-2 border rounded"
+                      />
+                    </div>
+                    <div className="mb-4">
+                      <label htmlFor="email">Email</label>
+                      <input
+                        type="email"
+                        id="email"
+                        placeholder="Email"
+                        className="w-full p-2 border rounded"
+                      />
+                    </div>
+                    <div className="mb-4">
+                      <label htmlFor="subject">Subject</label>
+                      <input
+                        type="text"
+                        id="subject"
+                        placeholder="Subject"
+                        className="w-full p-2 border rounded"
+                      />
+                    </div>
+                    <div className="mb-4">
+                      <label htmlFor="message">Message</label>
+                      <textarea
+                        id="message"
+                        placeholder="Message"
+                        className="w-full p-2 border rounded resize-vertical h-32"
+                      ></textarea>
+                    </div>
+                    <div className="text-center">
+                      <button
+                        type="button"
+                        onClick={closeModal}
+                        className="mr-3 bg-gray-500 hover:bg-gray-600 text-white py-2 px-4 rounded"
+                      >
+                        Close
+                      </button>
+                      <button
+                        type="submit"
+                        className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded"
+                      >
+                        Send me an email
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          )}
+        </>
     )
   }
   

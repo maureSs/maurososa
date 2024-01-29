@@ -1,10 +1,9 @@
 'use client'
 import React, { useState, useEffect } from 'react'
-import { Box, Grid, GridItem, Heading, Text } from '@chakra-ui/react';
-// Next
+
 import Image from 'next/image';
 import Link from 'next/link';
-// Api
+
 import { myProjects } from '../api'
 
 export type Root = ProjectInfo[]
@@ -13,6 +12,7 @@ export interface ProjectInfo {
   name: string;
   image: any;
   description: string;
+  technologies: string[];
   url: string;
 }
 
@@ -37,40 +37,71 @@ function ProjectsComponent() {
   return (
     <>
       {windowWidth > 480 ? (
-      <>
-      <Heading as='h2' size='xl' textAlign='center' mb='60px' ml='3%' fontSize='32px'>My projects</Heading>
-      <Grid templateColumns='repeat(5, 1fr)' gap={12} ml='20%'>
-      {myData.map((item, key) => (
-        <GridItem key={key} colSpan={2} mb='20px' className='hover-project' style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-          <Link href={item.url}>
-           <figure>
-            <Image src={item.image} width={220} height={100} alt={`${item.name} + ${key}`} className='project-image-style'/>
-           </figure>
+        <>
+          <h2 className='text-3xl font-bold text-center mb-8'>My projects</h2>
+          <div className='grid grid-cols-2 gap-6 ml-20'>
+            {myData.map((item, key) => (
+            <div>
+              <div
+                key={key}
+                className='mb-4 hover-project flex flex-col items-center'
+              >
+                <Link href={item.url}>
+                  <figure>
+                    <Image src={item.image} width={220} height={100} alt={`${item.name} + ${key}`} className='project-image-style' />
+                  </figure>
+                </Link>
+                <div className='project-info'>
+                  <h3 className='text-lg font-semibold text-center mb-4'>{item.name}</h3>
+                  <p className='text-center max-w-96'>{item.description}</p>
+                </div>
+              </div>
+               <div className='flex flex-row justify-center'>
+                 {item.technologies.map((item, key) => (
+                    <span key={key} className={`gap-x-4 ml-4 border-2 rounded-full text-xs py-1 px-4 text-white`}>
+                     {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+          <Link href='https://github.com/maureSs' className='github-projects block text-center mt-4'>
+            Find all my projects on GitHub!
           </Link>
-         <Box className="project-info">
-          <Heading as='h3' size='lg' textAlign='center' mb='10px' fontSize='24px'>{item.name}</Heading>
-          <Text textAlign='center'>{item.description}</Text>
-         </Box>
-       </GridItem> 
-      ))}
-      </Grid>
-      <Link href="https://github.com/maureSs" className="github-projects">Find all my projects on GitHub!</Link>
-      </>
+        </>
       ) : (
-       <Box w={[250, 300, 300, 500, 800]} ml='15%' mt='35%'>
-        <Heading as='h2' size='l' textAlign='center' mb='20px' fontSize='24px'>My projects</Heading>
-        {myData.map((item, key) => (
-        <GridItem key={key} colSpan={2} mb='20px' className='hover-project' style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-         <Box className="project-info">
-          <Link href={item.url}>
-           <Heading as='h3' size='l' textAlign='center' mb='10px' fontSize='18px'>{item.name}</Heading>
+        <div>
+          <h2 className='text-xl font-bold text-center mb-4'>My projects</h2>
+          {myData.map((item, key) => (
+          <div>
+            <div key={key} className='mb-8'>
+              <div className='project-info'>
+                <Link href={item.url}>
+                  <h3 className='text-lg font-semibold text-left mb-4'>{item.name}</h3>
+                </Link>
+                <p className='text-left text-sm mb-4'>{item.description}</p>
+              </div>
+              
+                <div>
+                <Link href={item.url}>
+                    <Image src={item.image} width={0} height={0} sizes="100vw" alt={`${item.name} + ${key}`} className='project-image-style' />
+                </Link>
+                </div>
+            </div>
+            <div className='flex flex-row justify-start mb-7'>
+              {item.technologies.map((item, key) => (
+               <span key={key} className={`gap-x-2 ml-2 border-2 rounded-full text-xs py-1 px-2`}>
+                {item}
+               </span>
+              ))}
+            </div>
+            </div>
+          ))}
+          <Link href='https://github.com/maureSs' className='github-projects block text-center mt-4'>
+            Find all my projects on GitHub!
           </Link>
-          <Text textAlign='center' maxW='200px' fontSize='14px'>{item.description}</Text>
-         </Box>
-       </GridItem> 
-      ))}
-      <Link href="https://github.com/maureSs" className="github-projects">Find all my projects on GitHub!</Link>
-      </Box>
+        </div>
       )}
     </>
   )
