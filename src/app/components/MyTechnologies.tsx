@@ -5,7 +5,6 @@ import Link from 'next/link';
 
 import { myTechnologies } from '../api';
 
-import { Box, Grid, GridItem, Text } from '@chakra-ui/react';
 
 export type Root = Technologies[]
 
@@ -33,34 +32,31 @@ export default function MyTechnologies() {
   }, []);
 
   return (
-    <>
-    {windowWidth > 767 ? (
-     <Grid templateColumns='repeat(5, 1fr)' gap={4} alignItems='center'>
-        {myData.map((item, key) => (
-          <GridItem key={key} colSpan={1}>
-           <Link href={item.url}>
-            <Box textAlign="center" display="flex" flexDir="column" alignItems="center"> 
-             <Image src={item.image} width={60} height={60} alt={`${item.name} + ${key}`} />
-               <Text mt='5%' fontWeight="semibold">
-                 {item.name}
-               </Text>
-            </Box> 
-           </Link>
-          </GridItem> 
-        ))}   
-      </Grid>
-      )
-      : (
-        <Grid templateColumns='repeat(3, 1fr)' gap={2} alignItems='center' ml='10%'>
-        {myData.map((item, key) => (
-          <GridItem key={key} colSpan={1} > 
-           <Link href={item.url}>
-             <Image src={item.image} width={30} height={30} alt={`${item.name} + ${key}`} />
-           </Link>
-          </GridItem> 
-        ))}   
-      </Grid>
+    <div>
+      {windowWidth > 767 ? (
+        <div className="grid grid-cols-5 gap-4 items-center">
+          {myData.map((item, key) => (
+            <div key={key} className="col-span-1">
+              <Link href={item.url}>
+                <div className="text-center flex flex-col items-center">
+                  <Image src={item.image} width={40} height={40} alt={`${item.name} + ${key}`} />
+                  <p className="mt-5 font-semibold">{item.name}</p>
+                </div>
+              </Link>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div className="grid grid-cols-3 gap-4 items-center ml-5">
+          {myData.map((item, key) => (
+            <div key={key} className="col-span-1">
+              <Link href={item.url}>
+                <Image src={item.image} width={50} height={50} alt={`${item.name} + ${key}`} />
+              </Link>
+            </div>
+          ))}
+        </div>
       )}
-   </>
+    </div>    
   )
 }

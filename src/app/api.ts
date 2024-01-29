@@ -67,24 +67,28 @@ export const myTechnologies = [
       name: "kingpudding",
       image: kingpudding,
       description: "Pastry Shop local entrepreneurship",
+      technologies: ['JavaScript', 'React.js'],
       url: "https://kingpudding.netlify.app/"
    },
    {
       name: "must-watch",
       image: mustWatch,
       description: "Use must-watch to take note of pending-to-watch movies and tv shows",
+      technologies: ['JavaScript','React.js', 'Firebase'],
       url: "https://must-watch-81fcf.web.app/login"
     },
     {
       name: "gaming-store",
       image: gamingStore,
       description: "An ecommerce simulator for purchasing gaming products",
+      technologies: ['TypeScript','React.js'],
       url: "https://gaming-store.netlify.app/"
     },
     {
       name: "quiz about everything",
       image: quizAboutEverything,
       description: "A fun Trivia-Quiz game!",
+      technologies: ['TypeScript','React.js'],
       url: "https://quiz-about-everything.netlify.app/"
     }
   ]

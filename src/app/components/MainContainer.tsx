@@ -1,32 +1,30 @@
 'use client'
 import React from 'react'
-import { Box, useColorMode } from '@chakra-ui/react'
-// Next
 import { usePathname } from 'next/navigation'
-// Components
 import ThemeButton from './ThemeButton'
+import { useTheme } from '../theme'
 import ParticleBackground from './particles/ParticleBackground'
 import ParticleBackgroundLight from './particles/ParticleBackgroundLight'
 import NavMenu from '../components/NavMenu'
 
 export default function MainContainer({children}:{children: React.ReactNode }) {
   // Dark mode - Light mode 
-  const { colorMode } = useColorMode()
+  const { colorMode } = useTheme();
   // No border for home page
   const pathname = usePathname()
 
   return (
-    <Box className={pathname === '/' ? 'home-layout' : colorMode === 'dark' ? "root-layout" : "light-layout"}>
+    <div className={`${pathname === '/' ? 'home-layout' : colorMode === 'dark' ? "root-layout" : "light-layout"}`}>
      {colorMode === 'dark' ?
      <ParticleBackground />
      : <ParticleBackgroundLight />}
      {pathname !== '/' && 
-      <Box className="button-theme">
+      <div className="button-theme-position">
        <ThemeButton />
-      </Box>
+      </div>
      }
      <NavMenu colorMode={colorMode} />
        {children}
-    </Box>
+    </div>
   )
 }

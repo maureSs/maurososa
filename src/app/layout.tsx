@@ -4,7 +4,7 @@ import { Space_Grotesk } from 'next/font/google'
 // styles and components
 import MainContainer from './components/MainContainer';
 import './globals.css'
-import { Providers } from "./providers";
+import { ThemeProvider } from './theme';
 
 export const metadata: Metadata = {
   title: 'Mauro Sosa',
@@ -24,11 +24,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={spaceGrotesk.className}>
-      <Providers>
-       <MainContainer>
+       <ThemeProvider>
+        <MainContainer>
          <div className="main-content">{children}</div>
-       </MainContainer>
-      </Providers>
+        </MainContainer>
+       </ThemeProvider>
       </body>
     </html>
   )
