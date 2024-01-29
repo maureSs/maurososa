@@ -1,4 +1,3 @@
-import React from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { IconButton} from '@chakra-ui/react'
 import { SunIcon, MoonIcon } from '@chakra-ui/icons'

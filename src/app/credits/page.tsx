@@ -1,6 +1,4 @@
 'use client'
-import React from 'react'
-
 function Credits() {
   return (
     <div className="inner-content">

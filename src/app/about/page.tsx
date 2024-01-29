@@ -1,8 +1,6 @@
 'use client'
-import React, {useState, useEffect} from 'react';
-// Chakra Ui and icons 
-import { Box, Text, Heading } from '@chakra-ui/react';
-// Components
+import {useState, useEffect} from 'react';
+
 import MyTechnologies  from '../components/MyTechnologies';
 
 function About() {
