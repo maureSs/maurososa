@@ -283,13 +283,22 @@ body {
   margin-left: 32%;
   margin-top: 30px;
   width: 300px;
-  @media (max-width: 1024px) {
-    margin-left: 22%;
+}
+
+@media (max-width: 1024px) {
+  .email-buttons {
+    max-width: 1024px;
   }
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
+  .email-buttons {
     margin-left: 2%;
   }
-  @media (max-width: 480px) {
+}
+
+@media (max-width: 480px) {
+  .email-buttons {
     margin-left: 0px;
     margin: 0 auto;
     width: 300px;
