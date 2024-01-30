@@ -31,7 +31,7 @@ function NavMenu({ colorMode }: { colorMode: string }) {
     <h2 className="text-4xl mb-4 font-bold">Mauro Sosa</h2>
     <p className="mb-4 ml-1">Web Developer</p>
     <div className={`flex flex-row md:flex-col md:mt-8 lg:mt-12 text-lg bg-slate-100 md:bg-transparent
-      ${windowWidth < 480 && 'fixed top-5 left-10 border-2 rounded-full' } 
+      ${windowWidth < 480 && 'fixed top-5 left-10 border-2 rounded-full text-black' } 
       `}>
       <Link href="/about" className='nav-anchor'>About</Link>
       <Link href="/projects" className='nav-anchor'>Projects</Link>
