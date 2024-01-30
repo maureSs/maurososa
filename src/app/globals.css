@@ -99,7 +99,10 @@ body {
   width: 70%;
   height: 80%;
   margin-left: 10%;
-  @media (max-width: 480px) {
+}
+
+@media (max-width: 480px) {
+  .main-content {
     width: 100%;
     height: auto;
     margin-left: 0;
@@ -112,7 +115,10 @@ body {
   margin: 0 auto;
   margin-top: 5%;
   text-align: center;
-  @media (max-width: 480px) {
+}
+
+@media (max-width: 480px) {
+  .inner-content {
     padding: 30px;
     text-align: left;
   }
@@ -121,7 +127,10 @@ body {
 .inner-content-home {
   margin-top: 25%;
   padding-left: 15%;
-  @media (max-width: 480px) {
+}
+
+@media (max-width: 480px) {
+  .inner-content-home {
     margin-top: 25%;
     padding: 30px;
     text-align: center;
@@ -131,7 +140,10 @@ body {
 /* NavMenu styles */
 .nav-anchor {
   padding: 0 0 10px 0; /* original */
-  @media (max-width: 480px) {
+}
+
+@media (max-width: 480px) {
+  .nav-anchor {
     padding: 0 10px 0 15px;
   }
 }
@@ -141,7 +153,10 @@ body {
   position: absolute;
   bottom: 5%;
   left: 20;
-  @media (max-width: 480px) {
+}
+
+@media (max-width: 480px) {
+  .nav-anchor-credits {
     display: none;
   }
 }
@@ -222,7 +237,10 @@ body {
 .project-image-style {
   border-radius: 20px;
   margin-bottom: 20px;
-  @media (max-width: 480px) {
+}
+
+@media (max-width: 480px) {
+  .project-image-style {
     border-radius: 0px;
     margin-bottom: 10px;
   }
