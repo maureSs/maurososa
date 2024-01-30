@@ -226,7 +226,10 @@ body {
     top: 5%;
     right: 6.5%;
   }
-  @media (max-width: 480px) {
+}
+
+@media (max-width: 480px) {
+  .button-theme-position {
     top: 10px;
     right: 10px;
   }
