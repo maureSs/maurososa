@@ -2,6 +2,7 @@
   "compilerOptions": {
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
+    "baseUrl": ".",
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -20,9 +21,10 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@/components/*": ["./src/app/_components/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/components/particles/ParticleBackground.js", "src/app/components/particles/ParticleBackground.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/_components/particles/ParticleBackground.js", "src/app/_components/particles/ParticleBackground.js"],
   "exclude": ["node_modules"]
 }

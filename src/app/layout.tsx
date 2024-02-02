@@ -2,7 +2,7 @@
 import type { Metadata } from 'next'
 import { Space_Grotesk } from 'next/font/google'
 // styles and components
-import MainContainer from './components/MainContainer';
+import MainContainer from './_components/MainContainer';
 import './globals.css'
 import { ThemeProvider } from './theme';
 

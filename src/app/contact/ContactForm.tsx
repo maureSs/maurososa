@@ -16,7 +16,7 @@ import { useState } from 'react'
         <>
           <button
             onClick={openModal}
-            className="mb-8 bg-brand hover:bg-[#3A3B3C] dark:bg-[#76A8CA] dark:hover:bg-[#3A3B3C] text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            className="mb-8 bg-gray hover:bg-[#3A3B3C] dark:bg-[#878e92] dark:hover:bg-[#3A3B3C] text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline"
           >
             Contact Form
           </button>

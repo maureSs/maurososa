@@ -13,6 +13,8 @@ import kingpudding from '../../public/assets/images/kingpudding.jpg'
 import mustWatch from '../../public/assets/images/mustWatch.jpg'
 import gamingStore from '../../public/assets/images/gamingStore.jpg'
 import quizAboutEverything from '../../public/assets/images/quizAboutEverything.jpg'
+
+export const aboutMe = '25 y/o web developer from Buenos Aires, Argentina. I mainly work with TypeScript, React and Next.js, and but I love learning new technologies and tools.'
  
 export const myTechnologies = [
     {

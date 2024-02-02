@@ -4,7 +4,7 @@ import ThemeButton from './ThemeButton'
 import { useTheme } from '../theme'
 import ParticleBackground from './particles/ParticleBackground'
 import ParticleBackgroundLight from './particles/ParticleBackgroundLight'
-import NavMenu from '../components/NavMenu'
+import NavMenu from './NavMenu'
 
 export default function MainContainer({children}:{children: React.ReactNode }) {
   // Dark mode - Light mode 

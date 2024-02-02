@@ -1,7 +1,9 @@
 'use client'
 import {useState, useEffect} from 'react';
 
-import MyTechnologies  from '../components/MyTechnologies';
+import MyTechnologies  from '@/components/MyTechnologies';
+
+import {aboutMe} from '../api'
 
 function About() {
   const [windowHeight, setWindowHeight] = useState(0);
@@ -22,7 +24,7 @@ function About() {
   return (
     <div className='inner-content'>
     <p className="sm:text-lg md:text-xl mb-5">
-      25 y/o web developer from Buenos Aires, Argentina. I mainly work with TypeScript, React and Next.js, and but I love learning new technologies and tools.
+      {aboutMe}
     </p>
     <p className="text-lg text-center mb-5">Languages and technologies</p>
     <MyTechnologies />
